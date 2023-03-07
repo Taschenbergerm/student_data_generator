@@ -2,11 +2,8 @@ package main
 
 import (
 	"encoding/csv"
-	"fmt"
-	"io/ioutil"
 	"log"
 	"math/rand"
-	"net/http"
 	"os"
 	"strconv"
 	"strings"
@@ -73,7 +70,10 @@ func createRow(i int) Row {
 	}
 	return row
 }
+func getFirstName() string { return firstNames[rand.Intn(len(firstNames))] }
+func getLastName() string  { return lastNames[rand.Intn(len(lastNames))] }
 
+/*
 func getFirstName() string { return getName("first") }
 func getLastName() string  { return getName("last") }
 
@@ -88,3 +88,4 @@ func getName(endpoint string) string {
 	}
 	return string(responseData)
 }
+*/
